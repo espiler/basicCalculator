@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calc" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Endgame Calculator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="client/css/main.css"/>
+  </head>
+  <body>
+    <div ng-controller="MainCtrl as calc" class="calculator">
+      <table cellspacing="0" cellpadding="0">
+        <tr class="calcDisplayRow">
+          <td class="calcDisplay" colspan="4">
+            <h3> {{displayVal | limitTo: 11}} </h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button ng-click="calc.clear()" id="AC" class="calcButton small toprow"> AC </button>
+          </td>
+          <td>
+            <button ng-click="calc.negate()" id="negate" class="calcButton small toprow"> +/- </button>
+          </td>
+          <td>
+            <button ng-click="calc.getPercent()" id="percent" class="calcButton toprow"> % </button>
+          </td>
+          <td>
+            <button ng-click="calc.operate('divide')" id="divide" class="calcButton operator"> &divide </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button ng-click="calc.updateDisplay(7)" id="7" class="calcButton"> 7 </button>
+          </td>
+          <td>
+            <button ng-click="calc.updateDisplay(8)" id="8" class="calcButton"> 8 </button>
+          </td>
+          <td>
+            <button ng-click="calc.updateDisplay(9)" id="9" class="calcButton"> 9 </button>
+          </td>
+          <td>
+            <button ng-click="calc.operate('multiply')" id="multiply" class="calcButton small operator"> X </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button ng-click="calc.updateDisplay(4)" id="4" class="calcButton"> 4 </button>
+          </td>
+          <td>
+            <button ng-click="calc.updateDisplay(5)" id="5" class="calcButton"> 5 </button>
+          </td>
+          <td>
+            <button ng-click="calc.updateDisplay(6)" id="6" class="calcButton"> 6 </button>
+          </td>
+          <td>
+            <button ng-click="calc.operate('subtract')" id="subtract" class="calcButton operator"> - </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button ng-click="calc.updateDisplay(1)" id="1" class="calcButton"> 1 </button>
+          </td>
+          <td>
+            <button ng-click="calc.updateDisplay(2)" id="2" class="calcButton"> 2 </button>
+          </td>
+          <td>
+            <button ng-click="calc.updateDisplay(3)" id="3" class="calcButton"> 3 </button>
+          </td>
+          <td>
+            <button ng-click="calc.operate('add')" id="add" class="calcButton operator"> + </button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button ng-click="calc.updateDisplay('0')" id="0" class="calcButton"> 0 </button>
+          </td>
+          <td>
+            <button ng-click="calc.updateDisplay('.')" id="dot" class="calcButton"> . </button>
+          </td>
+          <td>
+            <button ng-click="calc.operate('equals')" id="equals" class="calcButton operator"> = </button>
+          </td>
+        </tr>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src='client/js/keyBindings.js'></script>
+    <script src="client/js/app.js"></script>
+    <script src='client/js/MainCtrl.js'></script>
+    <script src='client/js/MainFactory.js'></script>
+
+  </body>
+</html>
+

@@ -1,3 +1,34 @@
+// var keys = {
+//   "#0": 48,
+//   "#1": 49,
+//   "#2": 50,
+//   "#3": 51,
+//   "#4": 52,
+//   "#5": 53,
+//   "#6": 54,
+//   "#7": 55,
+//   "#8": 56,
+//   "#9": 57,
+//   "#add": 43,
+//   "#subtract": 45,
+//   "#multiply": 42,
+//   "#divide": 47,
+//   "#equals": 13,
+//   "#dot": 46,
+//   "#AC": 99,
+//   "#percent": 37
+// }
+
+// for (var id in keys) {
+//   $(document).keypress(function(e) {
+//     if (e.which === keys[id]) {
+//       $(id).click()
+//       .addClass('pressed');
+//       setTimeout(function() { $(id).removeClass('pressed') }, 75);
+//     }
+//   });
+// }
+
 $(document).keypress(function(e){
     if (e.which === 48){
         $("#0").click()

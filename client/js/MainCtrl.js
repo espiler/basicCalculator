@@ -30,8 +30,10 @@ function Calc(Main, $scope) {
         newOperation = false;
         choosingOperator = false;
       }
-      $scope.displayVal += char;
-      exponentDisplay();
+      if (!(/\./.test($scope.displayVal) && char === '.')) {
+        $scope.displayVal += char;
+        exponentDisplay();
+      }
     }
   }
 

@@ -1,5 +1,5 @@
 {
-  "name": "Orange Calculator",
+  "name": "orangeCalculator",
   "version": "0.10.33",
   "description": "",
   "main": "client/js/app.js",

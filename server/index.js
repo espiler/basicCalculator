@@ -4,7 +4,7 @@ var router = require('./router');
 var app = express();
 router(app);
 
-var server = app.listen(3000);
+var server = app.listen(process.env.PORT || 3000);
 console.log('app listening on port:' + 3000);
 
 // expose app and server
